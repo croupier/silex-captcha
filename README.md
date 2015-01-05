@@ -41,6 +41,8 @@ $app->run();
 | distortion       | true            | boolean                                         | Enable or disable the distortion
 | background       | null            | null or array(r, g, b)                          | Force background color (this will disable many effects and is not recommended)
 | interpolation    | true            | boolean                                         | Enable or disable the interpolation, disabling it will be quicker but the images will look uglier
+| maxBehindLines   | null            | int                                             | sets the maximum number of lines behind the codesets the maximum number of lines behind the code
+| maxFrontLines    | null            | int                                             | sets the maximum number of lines on the front of the code
 
 
 
