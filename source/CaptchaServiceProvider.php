@@ -125,6 +125,16 @@ class CaptchaServiceProvider implements ServiceProviderInterface, ControllerProv
                         $app['captcha.background'][2]
                     );
                 }
+                
+                // Set MaxBehindLines, if specified
+                if ($app['captcha.maxBehindLines'] !== null) {
+                    $builder->setMaxBehindLines($app['captcha.maxBehindLines']);
+                }
+
+                // Set MaxBehindLines, if specified
+                if ($app['captcha.maxFrontLines'] !== null) {
+                    $builder->setMaxFrontLines($app['captcha.maxFrontLines']);
+                }                
 
                 $image = $builder
                     ->setDistortion($app['captcha.distortion'])
